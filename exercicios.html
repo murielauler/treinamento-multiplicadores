@@ -49,6 +49,7 @@ p{color:var(--ink-soft)} p b{color:var(--ink)}
 .exhead h1{margin:8px 0 4px;font-size:30px;color:#fff}
 .exhead h1 em{color:#8B6FCE}
 .exhead p{color:#B5AAD2;margin:0;font-size:15.5px}
+.exhead p b{color:#EDE9F7}
 
 .prompt{background:var(--panel);border-radius:10px;position:relative;margin:16px 0 8px}
 .prompt pre{margin:0;padding:22px 24px;white-space:pre-wrap;font-family:'JetBrains Mono',monospace;
@@ -71,8 +72,6 @@ footer{margin-top:70px;font-size:13px;color:var(--ink-dim)}
   <div class="brand"><span>✳</span> Exercícios</div>
   <div class="sub">Programa de Multiplicadores</div>
   <nav id="nav">
-    <div class="grp">Case</div>
-    <a href="#case">Construtora Horizonte</a>
     <div class="grp">Ex 1 · Seu contexto</div>
     <a href="#sobre-mim">1 · Sobre mim</a>
     <a href="#empresa">2 · Sobre a empresa</a>
@@ -84,23 +83,14 @@ footer{margin-top:70px;font-size:13px;color:var(--ink-dim)}
     <a href="#skill-ppt">Skill de PPT</a>
     <div class="grp">Ex 3 · Manutenção</div>
     <a href="#revisa">Revisar o cérebro</a>
+    <div class="grp">Case</div>
+    <a href="#case">Construtora Horizonte</a>
   </nav>
 </aside>
 
 <main>
 
-<section class="exhead" id="case" style="margin-top:56px">
-  <div class="k">O Case</div>
-  <h1>Construtora <em>Horizonte</em></h1>
-  <p style="margin-bottom:16px">O material completo do exercício: o problema, como funciona
-  hoje, as entrevistas e os dados dos últimos meses. Descompacte e comece pelo
-  <b style="color:#EDE9F7">LEIA-ME.md</b>.</p>
-  <p><a href="https://murielauler.github.io/treinamento-multiplicadores/case-fechamento-custos.zip"
-     style="display:inline-block;background:var(--accent-vivid);color:#fff;font-weight:600;
-     text-decoration:none;padding:10px 22px;border-radius:8px">⬇ Baixar o case (.zip)</a></p>
-</section>
-
-<section class="exhead" id="ex1">
+<section class="exhead" id="ex1" style="margin-top:56px">
   <div class="k">Exercício 1</div>
   <h1>Criando seu <em>contexto</em></h1>
   <p style="margin-bottom:10px">Cada prompt abaixo é uma entrevista — e o Claude Code
@@ -329,6 +319,17 @@ do meu trabalho — quero ver se saiu com a minha cara.</pre></div>
    .claude/skills/revisa-cerebro/SKILL.md com essa receita —
    a partir de hoje, quando eu disser "revisa meu cérebro",
    é seguir esse ritual.</pre></div>
+</section>
+
+<section class="exhead" id="case">
+  <div class="k">O Case</div>
+  <h1>Construtora <em>Horizonte</em></h1>
+  <p style="margin-bottom:16px">O material completo do exercício: o problema, como funciona
+  hoje, as entrevistas e os dados dos últimos meses. Descompacte e comece pelo
+  <b style="color:#EDE9F7">LEIA-ME.md</b>.</p>
+  <p><a href="https://murielauler.github.io/treinamento-multiplicadores/case-fechamento-custos.zip"
+     style="display:inline-block;background:var(--accent-vivid);color:#fff;font-weight:600;
+     text-decoration:none;padding:10px 22px;border-radius:8px">⬇ Baixar o case (.zip)</a></p>
 </section>
 
 <footer>Programa de Multiplicadores de IA · <b style="color:var(--accent)">✳</b> Muriel Auler</footer>
