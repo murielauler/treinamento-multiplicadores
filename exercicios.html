@@ -28,6 +28,14 @@ aside nav a:hover{color:var(--accent)}
 aside nav a.on{color:var(--accent);border-left-color:var(--accent);font-weight:600}
 aside nav .grp{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);
   margin:22px 0 6px;font-weight:600}
+
+.days{display:flex;gap:8px;margin-bottom:24px}
+.days a{flex:1;text-align:center;padding:9px 0;border-radius:8px;text-decoration:none;
+  font-size:13.5px;font-weight:600;border:1.5px solid var(--rule);color:var(--ink-soft);
+  background:#fff;transition:all .15s}
+.days a:hover{border-color:var(--accent);color:var(--accent)}
+.days a.on,.days a.on:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
 @media(max-width:840px){.layout{grid-template-columns:1fr}aside{position:static;height:auto;padding:32px 0 0}
   aside nav{display:flex;flex-wrap:wrap;gap:2px 14px}aside nav a{border-left:none;padding:4px 0}aside nav .grp{display:none}}
 
@@ -69,8 +77,12 @@ footer{margin-top:70px;font-size:13px;color:var(--ink-dim)}
 <div class="layout">
 
 <aside>
-  <div class="brand"><span>✳</span> Exercícios</div>
-  <div class="sub">Programa de Multiplicadores</div>
+  <div class="days">
+    <a href="index.html" class="on">Dia 1</a>
+    <a href="dia-2.html">Dia 2</a>
+  </div>
+  <div class="brand"><span>✳</span> Dia 1</div>
+  <div class="sub">Exercícios e o case</div>
   <nav id="nav">
     <div class="grp">Ex 1 · Seu contexto</div>
     <a href="#sobre-mim">1 · Sobre mim</a>
