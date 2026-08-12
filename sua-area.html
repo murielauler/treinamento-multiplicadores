@@ -103,40 +103,49 @@ footer{margin-top:70px;font-size:13px;color:var(--ink-dim)}
 <section class="exhead" id="topo" style="margin-top:56px">
   <div class="k">Depois do bootcamp</div>
   <h1>As dores da <em>sua área</em></h1>
-  <p>O seu segundo cérebro do Dia 1 já sabe quem você é, o que a sua área roda e
-  as suas primeiras dores. Aqui ele <b>usa isso</b> para montar a tabela — e
-  termina em <b>duas escolhas</b>: uma dor para mentorar alguém, uma para você resolver.</p>
+  <p>O Claude começa lendo o que você já escreveu no Dia 1 — e <b>pergunta só o que
+  faltar</b>. Terminou os arquivos de ontem? São 6 perguntas. Não terminou? Ele
+  ajusta sozinho. No fim: a tabela, e <b>duas escolhas</b>.</p>
 </section>
 
 <section id="prompt">
   <h2>O prompt <span class="file">dores-da-area.html</span></h2>
   <p class="when">Rode <b>dentro da pasta do seu segundo cérebro</b> — ele começa lendo o que
-  você criou ontem. Até 6 perguntas, cerca de 10 minutos.</p>
+  você criou ontem. De 6 a 10 perguntas, conforme o que já estiver lá.</p>
   <div class="prompt"><button class="copy">Copiar</button><pre>Você vai levantar as 5 maiores dores da minha área e montar uma tabela de
 priorização. Boa parte do que você precisa já está nos meus arquivos —
 comece por eles, não por mim.
 
 PASSO 0 — LEIA O QUE EU JÁ TE CONTEI. NÃO PERGUNTE ANTES DISSO.
-Você está na pasta do meu segundo cérebro, que eu montei ontem. Leia:
-- contexto/minhas-dores.md — dores que EU JÁ levantei, com frequência e
-  tempo gasto, e o que é repetitivo vs. o que exige o meu julgamento
+Você está na pasta do meu segundo cérebro, que eu comecei ontem. Varra a
+pasta e leia o que existir:
+- contexto/minhas-dores.md — dores que eu já levantei, com frequência e
+  tempo gasto
 - contexto/minha-funcao.md — o que a minha área faz, os sistemas que eu uso
   e o CALENDÁRIO DO MEU MÊS (é o mapa de processos: use ele)
 - contexto/sobre-mim.md — meu papel e minhas tarefas recorrentes
 - contexto/sobre-a-empresa.md — o negócio em volta
-Se algum não existir, siga com os que existirem.
+
+IMPORTANTE: eu posso não ter terminado esses arquivos. Pode faltar algum,
+podem estar pela metade, ou ter outro nome — procure na pasta e use o que
+achar. Se não achar nada, tudo bem: a gente levanta do zero, só leva umas
+perguntas a mais. Não me cobre pelo que falta e não trave por causa disso.
 
 SUA PRIMEIRA MENSAGEM NÃO É UMA PERGUNTA
-É o que você já sabe. Me mostre:
-- as dores que encontrou nos meus arquivos, já com o número que está lá;
+É a prestação de contas do que você achou:
+- o que encontrou — e o que NÃO encontrou;
+- as dores que já estão nos arquivos, com o número que estiver lá;
 - os processos que deduziu do meu calendário;
-- quantas dores faltam para chegar a 5, e o que exatamente falta saber.
-Só depois disso comece a perguntar.
+- quantas dores faltam para chegar a 5.
+E anuncie o seu orçamento de perguntas, pela regra abaixo.
 
 ORÇAMENTO DE PERGUNTAS — REGRA MAIS IMPORTANTE
-Depois de ler, você tem no MÁXIMO 6 perguntas até me mostrar a tabela.
-Conte e me diga o número em cada mensagem: (pergunta 2 de 6).
-Acabaram as 6? Trabalhe com o que tiver e siga. Não peça mais.
+Depende do que você encontrou na pasta:
+- dores COM número            → 6 perguntas
+- dores sem número, ou só o contexto da área → 8 perguntas
+- quase nada, ou nada         → 10 perguntas
+Conte e me diga o número em cada mensagem: (pergunta 2 de 8).
+Acabou o orçamento? Trabalhe com o que tiver e siga. Não peça mais.
 
 REGRAS
 - UMA pergunta por vez. Espere minha resposta.
@@ -147,15 +156,15 @@ REGRAS
 - Não proponha solução. Aqui é só o problema.
 - Sem nome de colega (use o papel) e sem dado confidencial.
 
-NO QUE GASTAR AS 6 PERGUNTAS
+NO QUE GASTAR AS PERGUNTAS
 1. Completar as dores que faltam para fechar 5 — mande as quatro iscas de
    uma vez, numa mensagem só:
    - o que a área odeia fazer toda semana?
    - o que é copiado de um sistema pro outro, na mão?
    - onde alguém lê e interpreta documento bagunçado?
    - onde o trabalho para esperando alguém?
-2. Pegar frequência e tempo SÓ das dores novas — em bloco, não uma a uma.
-   As que já vieram do minhas-dores.md não se pergunta de novo.
+2. Pegar frequência e tempo SÓ das dores que ainda não têm número — em
+   bloco, não uma a uma. O que já veio dos arquivos não se pergunta de novo.
 3. Desentortar o que ficou vago demais para virar linha de tabela.
 Escolha as 5 maiores você mesmo e me diga por que essas.
 
