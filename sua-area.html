@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sua área · Levantamento de dores · Multiplicadores</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#FAF8FC; --bg-elev:#F1EDF8; --ink:#17121F; --ink-soft:#464050;
+  --ink-dim:#8A8296; --rule:#DDD6EA; --accent:#5B3CA0; --accent-vivid:#6C4CE0;
+  --lav:#E5DFF7; --panel:#1F0E3E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:Inter,-apple-system,sans-serif;font-size:16.5px;line-height:1.6}
+.layout{display:grid;grid-template-columns:230px 1fr;max-width:1120px;margin:0 auto;gap:48px;padding:0 28px}
+
+aside{position:sticky;top:0;height:100vh;padding:56px 0 40px;font-size:14px;overflow-y:auto}
+aside .brand{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:17px;margin-bottom:4px}
+aside .brand span{color:var(--accent)}
+aside .sub{color:var(--ink-dim);font-size:12.5px;margin-bottom:34px}
+aside nav a{display:block;color:var(--ink-soft);text-decoration:none;padding:7px 0 7px 14px;
+  border-left:2px solid var(--rule);transition:all .15s}
+aside nav a:hover{color:var(--accent)}
+aside nav a.on{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+aside nav .grp{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);
+  margin:22px 0 6px;font-weight:600}
+
+.days{display:flex;gap:6px;margin-bottom:24px}
+.days a{flex:1;text-align:center;padding:9px 2px;border-radius:8px;text-decoration:none;
+  font-size:12.5px;font-weight:600;border:1.5px solid var(--rule);color:var(--ink-soft);
+  background:#fff;transition:all .15s}
+.days a:hover{border-color:var(--accent);color:var(--accent)}
+.days a.on,.days a.on:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+@media(max-width:840px){.layout{grid-template-columns:1fr}aside{position:static;height:auto;padding:32px 0 0;overflow:visible}
+  aside nav{display:flex;flex-wrap:wrap;gap:2px 14px}aside nav a{border-left:none;padding:4px 0}aside nav .grp{display:none}}
+
+main{padding:56px 0 110px;max-width:680px}
+h1{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,4.2vw,40px);line-height:1.1;
+  font-weight:700;margin:10px 0 10px}
+h1 em{font-style:italic;color:var(--accent)}
+h2{font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600;margin:56px 0 4px;
+  padding-top:18px;border-top:1px solid var(--rule)}
+h2 em{font-style:italic;color:var(--accent)}
+h2 .file{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:var(--accent);
+  background:var(--lav);padding:3px 10px;border-radius:6px;vertical-align:middle;margin-left:10px;white-space:nowrap}
+p{color:var(--ink-soft)} p b{color:var(--ink)}
+.when{font-size:14.5px;color:var(--ink-dim);margin:2px 0 12px}
+.when code{font-family:'JetBrains Mono',monospace;font-size:.9em;background:var(--lav);
+  color:var(--accent);padding:1px 6px;border-radius:5px}
+
+.exhead{background:var(--panel);color:#fff;border-radius:14px;padding:22px 30px;margin:54px 0 6px}
+.exhead .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C8B6F0;font-weight:700}
+.exhead h1{margin:6px 0 4px;font-size:27px;color:#fff}
+.exhead h1 em{color:#8B6FCE}
+.exhead p{color:#B5AAD2;margin:0;font-size:15.5px}
+.exhead p b{color:#EDE9F7}
+
+.prompt{background:var(--panel);border-radius:10px;position:relative;margin:14px 0 8px}
+.prompt pre{margin:0;padding:22px 24px;white-space:pre-wrap;font-family:'JetBrains Mono',monospace;
+  font-size:13px;line-height:1.6;color:#EDE9F7}
+.copy{position:absolute;top:12px;right:12px;background:var(--accent-vivid);border:none;color:#fff;
+  font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer}
+.copy:hover{background:var(--accent)}
+.copy.ok{background:#1F7A4D}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.two .card{background:#fff;border:1.5px solid var(--rule);border-radius:12px;padding:18px 20px}
+.two .card.hot{border-color:var(--accent)}
+.two .card .tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;
+  color:var(--accent);display:block;margin-bottom:6px}
+.two .card h3{font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;margin:0 0 8px}
+.two .card ul{margin:0;padding-left:18px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.two .card li{margin-bottom:5px}
+@media(max-width:600px){.two{grid-template-columns:1fr}}
+footer{margin-top:70px;font-size:13px;color:var(--ink-dim)}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<aside>
+  <div class="days">
+    <a href="index.html">Dia 1</a>
+    <a href="dia-2.html">Dia 2</a>
+    <a href="sua-area.html" class="on">Sua área</a>
+  </div>
+  <div class="brand"><span>✳</span> Sua área</div>
+  <div class="sub">Antes da sessão 1x1</div>
+  <nav id="nav">
+    <div class="grp">O levantamento</div>
+    <a href="#prompt">O prompt</a>
+    <a href="#escolhas">As duas escolhas</a>
+  </nav>
+</aside>
+
+<main>
+
+<section class="exhead" id="topo" style="margin-top:56px">
+  <div class="k">Depois do bootcamp</div>
+  <h1>As dores da <em>sua área</em></h1>
+  <p>O seu segundo cérebro do Dia 1 já sabe quem você é, o que a sua área roda e
+  as suas primeiras dores. Aqui ele <b>usa isso</b> para montar a tabela — e
+  termina em <b>duas escolhas</b>: uma dor para mentorar alguém, uma para você resolver.</p>
+</section>
+
+<section id="prompt">
+  <h2>O prompt <span class="file">dores-da-area.html</span></h2>
+  <p class="when">Rode <b>dentro da pasta do seu segundo cérebro</b> — ele começa lendo o que
+  você criou ontem. Até 6 perguntas, cerca de 10 minutos.</p>
+  <div class="prompt"><button class="copy">Copiar</button><pre>Você vai levantar as 5 maiores dores da minha área e montar uma tabela de
+priorização. Boa parte do que você precisa já está nos meus arquivos —
+comece por eles, não por mim.
+
+PASSO 0 — LEIA O QUE EU JÁ TE CONTEI. NÃO PERGUNTE ANTES DISSO.
+Você está na pasta do meu segundo cérebro, que eu montei ontem. Leia:
+- contexto/minhas-dores.md — dores que EU JÁ levantei, com frequência e
+  tempo gasto, e o que é repetitivo vs. o que exige o meu julgamento
+- contexto/minha-funcao.md — o que a minha área faz, os sistemas que eu uso
+  e o CALENDÁRIO DO MEU MÊS (é o mapa de processos: use ele)
+- contexto/sobre-mim.md — meu papel e minhas tarefas recorrentes
+- contexto/sobre-a-empresa.md — o negócio em volta
+Se algum não existir, siga com os que existirem.
+
+SUA PRIMEIRA MENSAGEM NÃO É UMA PERGUNTA
+É o que você já sabe. Me mostre:
+- as dores que encontrou nos meus arquivos, já com o número que está lá;
+- os processos que deduziu do meu calendário;
+- quantas dores faltam para chegar a 5, e o que exatamente falta saber.
+Só depois disso comece a perguntar.
+
+ORÇAMENTO DE PERGUNTAS — REGRA MAIS IMPORTANTE
+Depois de ler, você tem no MÁXIMO 6 perguntas até me mostrar a tabela.
+Conte e me diga o número em cada mensagem: (pergunta 2 de 6).
+Acabaram as 6? Trabalhe com o que tiver e siga. Não peça mais.
+
+REGRAS
+- UMA pergunta por vez. Espere minha resposta.
+- NUNCA pergunte algo que já está nos meus arquivos. Se você me perguntar
+  o que eu respondi ontem, eu vou saber que você não leu.
+- Prefira confirmar a perguntar: "achei isto, está certo?" gasta menos do
+  meu tempo do que uma pergunta aberta.
+- Não proponha solução. Aqui é só o problema.
+- Sem nome de colega (use o papel) e sem dado confidencial.
+
+NO QUE GASTAR AS 6 PERGUNTAS
+1. Completar as dores que faltam para fechar 5 — mande as quatro iscas de
+   uma vez, numa mensagem só:
+   - o que a área odeia fazer toda semana?
+   - o que é copiado de um sistema pro outro, na mão?
+   - onde alguém lê e interpreta documento bagunçado?
+   - onde o trabalho para esperando alguém?
+2. Pegar frequência e tempo SÓ das dores novas — em bloco, não uma a uma.
+   As que já vieram do minhas-dores.md não se pergunta de novo.
+3. Desentortar o que ficou vago demais para virar linha de tabela.
+Escolha as 5 maiores você mesmo e me diga por que essas.
+
+O QUE VOCÊ NÃO PERGUNTA
+Impacto, complexidade e risco você ESTIMA sozinho, marcando [suposto], e eu
+corrijo depois olhando a tabela. Não gaste pergunta com isso.
+
+OS QUATRO CAMPOS
+- CUSTO — o número: vezes/semana × minutos × pessoas = h/mês. Aceite faixa
+  ("3 a 5h/mês"). Marque [confirmado] se eu informei, [suposto] se você
+  estimou.
+- IMPACTO (P/M/G) — o quanto o negócio sente. NÃO é o mesmo que custo:
+  10 minutos que travam o fechamento do mês valem mais que 10 horas de uma
+  tarefa que ninguém espera. Considere quem sofre além de mim.
+- COMPLEXIDADE (P/M/G) — o esforço de resolver.
+  P = assistente de IA configurado ou consulta a documentos
+  M = automação entre sistemas, com regra fixa
+  G = sistema novo, integração ou decisão automática em volume
+- RISCO (P/M/G) — o que acontece se a solução errar.
+  P = erro reversível, ninguém de fora percebe
+  M = gera retrabalho ou alguém interno percebe
+  G = dado sensível, ou cliente/auditoria/órgão externo enxerga
+
+A RODADA DE CORREÇÃO
+Monte a tabela com tudo preenchido — inclusive o que você estimou — e me
+mostre. Pergunte de uma vez só: "o que está errado?". Eu corrijo em uma
+mensagem, você aplica e gera o arquivo. Uma rodada, não várias.
+
+O ARQUIVO
+Crie dores-da-area.html — uma página só, que eu abro no navegador.
+- Cabeçalho: minha área, meu papel e a data.
+- Tabela com as colunas: Dor · Custo · Impacto · Complexidade · Risco
+- Ordene da melhor para a pior oportunidade: impacto alto primeiro,
+  desempatando por complexidade e risco baixos.
+- Embaixo da tabela, uma linha por dor explicando o porquê das notas.
+
+CORES — a regra é "verde = bom candidato a projeto":
+- IMPACTO:      G verde · M amarelo · P cinza
+- COMPLEXIDADE: P verde · M amarelo · G vermelho
+- RISCO:        P verde · M amarelo · G vermelho
+Repare que a escala inverte: impacto alto é bom, complexidade e risco altos
+são ruins. Pinte o FUNDO da célula em tom claro, com o texto escuro — não
+só a letra colorida. Custo é texto, com o selo [confirmado] ou [suposto].
+
+HTML autocontido: CSS embutido, sem link externo, sem framework. Sóbrio e
+legível — isso vai ser projetado numa tela.</pre></div>
+</section>
+
+<section id="escolhas">
+  <h2>Com a tabela na mão: <em>duas escolhas</em></h2>
+  <p>Cada um sai daqui com <b>duas</b> dores marcadas — e os critérios de cada
+  uma são diferentes de propósito:</p>
+
+  <div class="two">
+    <div class="card">
+      <span class="tag">Escolha 1 · Mentoria</span>
+      <h3>Uma dor simples, de outra pessoa</h3>
+      <ul>
+        <li>Rota baixa: Gem, NotebookLM ou skill</li>
+        <li>Risco P — erro reversível</li>
+        <li>~2h de sessão + uma semana de uso</li>
+        <li>Ela constrói. Você orienta.</li>
+      </ul>
+    </div>
+    <div class="card hot">
+      <span class="tag">Escolha 2 · Seu projeto</span>
+      <h3>Uma dor mediana, sua</h3>
+      <ul>
+        <li>Retorno M ou G</li>
+        <li>Automação ou sistema com agente</li>
+        <li>Primeira versão em poucas semanas</li>
+        <li>Dados que você já consegue acessar</li>
+      </ul>
+    </div>
+  </div>
+
+  <p><b>Por que não a maior dor da lista?</b> Porque dor grande demais vira
+  projeto que não entrega. A mediana que termina vence a gigante que empaca —
+  e a primeira entrega é o que compra espaço para a segunda.</p>
+</section>
+
+<footer><b style="color:var(--accent)">✳</b> Programa de Multiplicadores de IA</footer>
+
+</main>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(btn => {
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(btn.parentElement.querySelector('pre').innerText).then(() => {
+      btn.textContent = 'Copiado ✓'; btn.classList.add('ok');
+      setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('ok'); }, 2000);
+    });
+  });
+});
+const links=[...document.querySelectorAll('#nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+secs.forEach(s=>{
+  new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+    links.forEach(l=>l.classList.remove('on'));
+    links[secs.indexOf(e.target)].classList.add('on');
+  }})},{rootMargin:'-30% 0px -60% 0px'}).observe(s)});
+</script>
+</body>
+</html>
