@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dia 2 · Três prompts · Multiplicadores</title>
+<title>Dia 2 · Prompts · Multiplicadores</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root{
   --bg:#FAF8FC; --bg-elev:#F1EDF8; --ink:#17121F; --ink-soft:#464050;
   --ink-dim:#8A8296; --rule:#DDD6EA; --accent:#5B3CA0; --accent-vivid:#6C4CE0;
-  --lav:#E5DFF7; --panel:#1F0E3E; --warn:#B0431C; --warn-bg:#FDF3EE;
+  --lav:#E5DFF7; --panel:#1F0E3E;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -40,58 +40,31 @@ aside nav .grp{font-size:11px;letter-spacing:.12em;text-transform:uppercase;colo
   aside nav{display:flex;flex-wrap:wrap;gap:2px 14px}aside nav a{border-left:none;padding:4px 0}aside nav .grp{display:none}}
 
 main{padding:56px 0 110px;max-width:680px}
-.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
-h1{font-family:Fraunces,Georgia,serif;font-size:clamp(32px,4.5vw,44px);line-height:1.1;
+h1{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,4.2vw,40px);line-height:1.1;
   font-weight:700;margin:10px 0 10px}
 h1 em{font-style:italic;color:var(--accent)}
-.lede{font-size:17px;color:var(--ink-soft);max-width:58ch;margin:0}
-h2{font-family:Fraunces,Georgia,serif;font-size:25px;font-weight:600;margin:58px 0 6px;
+h2{font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600;margin:56px 0 4px;
   padding-top:18px;border-top:1px solid var(--rule)}
 h2 em{font-style:italic;color:var(--accent)}
 h2 .file{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:var(--accent);
   background:var(--lav);padding:3px 10px;border-radius:6px;vertical-align:middle;margin-left:10px;white-space:nowrap}
-h3{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600;margin:34px 0 4px}
 p{color:var(--ink-soft)} p b{color:var(--ink)}
-code{font-family:'JetBrains Mono',monospace;font-size:.86em;background:var(--lav);
-  color:var(--accent);padding:2px 7px;border-radius:5px}
+.when{font-size:14.5px;color:var(--ink-dim);margin:2px 0 12px}
+.when code{font-family:'JetBrains Mono',monospace;font-size:.9em;background:var(--lav);
+  color:var(--accent);padding:1px 6px;border-radius:5px}
 
-.exhead{background:var(--panel);color:#fff;border-radius:14px;padding:26px 30px;margin:54px 0 10px}
+.exhead{background:var(--panel);color:#fff;border-radius:14px;padding:22px 30px;margin:54px 0 6px}
 .exhead .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C8B6F0;font-weight:700}
-.exhead h1{margin:8px 0 4px;font-size:30px;color:#fff}
+.exhead h1{margin:6px 0 0;font-size:27px;color:#fff}
 .exhead h1 em{color:#8B6FCE}
-.exhead p{color:#B5AAD2;margin:0;font-size:15.5px}
-.exhead p b{color:#EDE9F7}
-.exhead code{background:#3A2470;color:#D9CBFF}
 
-.prompt{background:var(--panel);border-radius:10px;position:relative;margin:16px 0 8px}
+.prompt{background:var(--panel);border-radius:10px;position:relative;margin:14px 0 8px}
 .prompt pre{margin:0;padding:22px 24px;white-space:pre-wrap;font-family:'JetBrains Mono',monospace;
   font-size:13px;line-height:1.6;color:#EDE9F7}
 .copy{position:absolute;top:12px;right:12px;background:var(--accent-vivid);border:none;color:#fff;
   font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer}
 .copy:hover{background:var(--accent)}
 .copy.ok{background:#1F7A4D}
-
-.check{background:#fff;border:1.5px solid var(--accent);border-radius:12px;padding:20px 26px;margin:28px 0}
-.check label{display:flex;gap:10px;align-items:baseline;margin-bottom:9px;font-size:15.5px;color:var(--ink-soft);cursor:pointer}
-.check input{accent-color:var(--accent);transform:translateY(2px)}
-
-.steps{background:var(--bg-elev);border-radius:12px;padding:22px 28px;margin:22px 0}
-.steps ol{margin:0;padding-left:20px}
-.steps li{margin-bottom:9px;color:var(--ink-soft)}
-.steps li b{color:var(--ink)}
-
-.note{border-left:3px solid var(--accent);background:var(--bg-elev);border-radius:0 10px 10px 0;
-  padding:16px 22px;margin:22px 0;font-size:15.5px;color:var(--ink-soft)}
-.note b{color:var(--accent)}
-
-.facil{background:var(--warn-bg);border:1.5px solid #F0D6C6;border-radius:12px;padding:20px 26px;margin:28px 0}
-.facil .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--warn);
-  font-weight:700;display:block;margin-bottom:10px}
-.facil ul{margin:0;padding-left:20px}
-.facil li{margin-bottom:7px;color:var(--ink-soft);font-size:15.5px}
-
-.qs{margin:18px 0 0;padding-left:20px}
-.qs li{margin-bottom:8px;color:var(--ink-soft)}
 footer{margin-top:70px;font-size:13px;color:var(--ink-dim)}
 </style>
 </head>
@@ -104,230 +77,211 @@ footer{margin-top:70px;font-size:13px;color:var(--ink-dim)}
     <a href="dia-2.html" class="on">Dia 2</a>
   </div>
   <div class="brand"><span>✳</span> Dia 2</div>
-  <div class="sub">Três prompts, com aprovação humana</div>
+  <div class="sub">Os prompts do dia</div>
   <nav id="nav">
-    <div class="grp">Como funciona</div>
-    <a href="#fases">As duas fases</a>
-    <a href="#contexto">Contexto da aula</a>
-    <div class="grp">A · Fatia funcional</div>
-    <a href="#prompt-a">O prompt</a>
-    <a href="#avalia-a">Antes de aprovar</a>
-    <div class="grp">B · Decisão com IA</div>
-    <a href="#prompt-b">O prompt</a>
-    <a href="#avalia-b">Antes de aprovar</a>
-    <div class="grp">C · Deploy</div>
-    <a href="#prompt-c">O prompt</a>
-    <div class="grp">Fechamento</div>
-    <a href="#debrief">Debrief</a>
-    <a href="#facilitadora">Para a facilitadora</a>
+    <div class="grp">Fatia funcional</div>
+    <a href="#a1">A1 · Escolher a fatia</a>
+    <a href="#a2">A2 · Banco no Supabase</a>
+    <a href="#a3">A3 · Backend e tela</a>
+    <div class="grp">Decisão com IA</div>
+    <a href="#b1">B1 · Escolher a decisão</a>
+    <a href="#b2">B2 · Tabela decisoes_ia</a>
+    <a href="#b3">B3 · Backend e LLM</a>
+    <div class="grp">Deploy</div>
+    <a href="#c1">C · Publicar na Vercel</a>
   </nav>
 </aside>
 
 <main>
 
-<section class="exhead" id="topo" style="margin-top:56px">
-  <div class="k">Dia 2</div>
-  <h1>Três prompts, com <em>aprovação humana</em></h1>
-  <p style="margin-bottom:10px">Um prompt por aprendizado:</p>
-  <p style="color:#EDE9F7">
-    <b>A · Fatia funcional</b> — input → backend → Supabase → front<br>
-    <b>B · Decisão com IA</b> — banco → backend → LLM → <code>decisoes_ia</code> → front<br>
-    <b>C · Deploy</b> — projeto local → build → Vercel → URL de Preview</p>
+<section class="exhead" id="a" style="margin-top:56px">
+  <div class="k">Bloco A</div>
+  <h1>Fatia <em>funcional</em></h1>
 </section>
 
-<section id="fases">
-  <h2>As duas <em>fases</em> de cada prompt</h2>
-  <div class="steps">
-    <ol>
-      <li><b>Antes de <code>APROVAR</code>:</b> o Claude só inspeciona e propõe. Você conversa
-      normalmente, critica e pede mudanças. Nenhum código pode ser alterado.</li>
-      <li><b>Depois de <code>APROVAR</code>:</b> o Claude implementa exatamente a última proposta.</li>
-    </ol>
-  </div>
-  <p>Você não precisa preencher contrato nem colar um segundo prompt. Se não gostar da
-  proposta, responda como gente:</p>
-  <div class="prompt"><button class="copy">Copiar</button><pre>Está grande demais. Use só quatro campos e mostre na tabela que já existe.</pre></div>
-  <p style="margin-top:18px">Quando estiver satisfeito, responda somente:</p>
-  <div class="prompt"><button class="copy">Copiar</button><pre>APROVAR</pre></div>
-</section>
-
-<section id="contexto">
-  <h2>Contexto da <em>aula</em></h2>
-  <div class="note">
-    Tudo é feito com <b>dados sintéticos</b>, em sandbox descartável, para aprender como as
-    camadas se comunicam. Não é um sistema autorizado para uso real e não deve ser descrito
-    como “produção”. A entrega máxima é um <b>protótipo didático funcional publicado</b>.
-  </div>
-</section>
-
-<section class="exhead" id="a">
-  <div class="k">Prompt A</div>
-  <h1>Input, Supabase e <em>front</em></h1>
-  <p>Cole este prompt junto com a <b>pasta/ZIP do projeto</b> que vocês fizeram ontem.</p>
-</section>
-
-<section id="prompt-a">
-  <h2>O prompt <span class="file">fatia vertical</span></h2>
+<section id="a1">
+  <h2>A1 · Escolher a fatia <span class="file">só proposta</span></h2>
+  <p class="when">Cole junto com a pasta/ZIP do projeto de ontem. Nada é implementado aqui.</p>
   <div class="prompt"><button class="copy">Copiar</button><pre>Você está trabalhando em um projeto criado ontem por alunos durante uma aula.
 Ele tem um front ou mock e pode ter uma proposta de banco, mas ainda não é uma
 aplicação completa.
 
-CONTEXTO DIDÁTICO
-Tudo será feito com dados sintéticos, em sandbox descartável. O objetivo é
-aprender como front, backend e banco se comunicam — não construir ou autorizar
-um sistema de produção. Prefira código pequeno, explícito e fácil de explicar.
+Tudo será feito com dados sintéticos, em sandbox descartável, para aprender
+como front, backend e banco se comunicam. Não é um sistema de produção.
+Prefira sempre o desenho pequeno, explícito e fácil de explicar.
 
-OBJETIVO
-Implementar a menor fatia vertical possível que demonstre:
+SUA TAREFA AGORA
+Apenas ESCOLHER a menor fatia vertical que demonstre:
 
 formulário simples → POST /api/... → Supabase → GET /api/... → uma lista,
 tabela ou card já existente no front.
 
 A fatia deve representar o primeiro passo do processo desenhado no projeto.
-Escolha somente:
-- UMA entidade principal;
-- 3 a 5 campos;
+Limites da escolha:
+- UMA entidade principal, com 3 a 5 campos — entre eles pelo menos um número,
+  uma data e uma escolha fechada (select);
 - UMA tabela de negócio;
-- UMA rota POST;
-- UMA rota GET;
-- UMA tela ou componente já existente.
+- opcionalmente UMA tabela de referência somente-leitura (ex.: obras,
+  categorias), com 3 a 5 linhas de seed, ligada por FK e exibida como select
+  no formulário;
+- UMA rota POST e UMA rota GET (o GET pode ter no máximo um filtro);
+- UMA tela ou componente que já existe no front.
 
 Se o primeiro passo real for complexo — arquivo, OCR, IA, integração externa
-ou muitas regras — represente-o nesta aula por um formulário de 3 a 5 campos.
-Não implemente a complexidade futura.
+ou muitas regras — represente-o por um formulário simples. Não desenhe a
+complexidade futura.
 
 MODO DE TRABALHO — REGRA ABSOLUTA
-Você começa em MODO PROPOSTA.
-
-Enquanto a mensagem do aluno não for exatamente APROVAR:
-- não crie, altere ou exclua arquivos;
-- não escreva no banco;
-- não instale dependências;
-- não configure ou publique serviços;
+Você está em MODO PROPOSTA. Enquanto a mensagem do aluno não for exatamente
+APROVAR:
+- não crie, altere ou exclua nenhum arquivo;
+- não instale nada, não configure nada, não escreva em banco nenhum;
 - responda ao feedback ajustando a proposta;
-- termine cada resposta com:
-  “Aguardando APROVAR. Não fiz alterações.”
+- termine cada resposta com: “Aguardando APROVAR. Não fiz alterações.”
 
-Somente quando o aluno responder exatamente APROVAR, implemente a versão mais
-recente da proposta. APROVAR não autoriza ampliar o escopo.
+PRIMEIRA RESPOSTA — O QUADRO DA FATIA
+Inspecione o projeto e responda somente com este quadro preenchido:
 
-NÃO FAZ PARTE
-- completar outras telas ou botões;
-- autenticação, papéis ou permissões;
-- IA, OCR, agentes ou classificação automática;
-- upload ou storage de arquivos;
-- integrações externas;
-- editar, excluir, aprovar ou notificar;
-- refatorar ou redesenhar todo o front;
-- criar arquitetura para o produto inteiro;
-- adicionar algo “útil” que não foi pedido.
+═══════════════ FATIA ESCOLHIDA ═══════════════
+1. NOME DA FATIA: (uma frase: o que ela demonstra)
+2. PASSO DO PROCESSO: qual primeiro passo real ela representa
+3. TABELAS:
+   - negócio: nome + campos com tipos
+   - referência (se houver): nome + linhas do seed
+4. AÇÕES DO USUÁRIO: o que dá para FAZER na tela
+   (ex.: cadastrar X, ver a lista de X filtrada por Y)
+5. TELA: qual componente existente vai mostrar os dados
+6. ROTAS: POST /api/... (o que grava) · GET /api/... (o que devolve e filtro)
+7. FORA DESTA FATIA: lista explícita do que NÃO entra
+8. CRITÉRIOS DE ACEITE: três, verificáveis
+═══════════════════════════════════════════════
+
+Depois pare e aguarde. O aluno pode criticar e pedir mudanças em linguagem
+natural quantas vezes quiser.
+
+QUANDO RECEBER APROVAR
+Crie somente UM arquivo: docs/fatia-aprovada.md, com o quadro final aprovado.
+Nada além disso — banco é o próximo prompt. Confirme com:
+“Fatia registrada em docs/fatia-aprovada.md. Próximo passo: banco de dados.”</pre></div>
+</section>
+
+<section id="a2">
+  <h2>A2 · Banco no Supabase <span class="file">docs/fatia-aprovada.md</span></h2>
+  <p class="when">Use depois do A1 aprovado. O Claude para e espera <code>CREDENCIAL CONFIGURADA</code>.</p>
+  <div class="prompt"><button class="copy">Copiar</button><pre>Leia docs/fatia-aprovada.md. Sua tarefa agora é implementar SOMENTE o banco
+de dados dessa fatia no Supabase. Nada de backend, front ou deploy.
+
+PASSO 1 — CREDENCIAL (antes de qualquer coisa)
+1. Crie ou atualize .env.example com os nomes SUPABASE_URL e
+   SUPABASE_SERVICE_ROLE_KEY, sem valores.
+2. Confirme que .env.local está no .gitignore (se o projeto ignora .env*,
+   mantenha a exceção !.env.example).
+3. PARE e instrua o aluno a:
+   - abrir o painel do Supabase → Settings → API;
+   - copiar a Project URL e a service_role key;
+   - colar as duas em .env.local, manualmente, no editor;
+   - responder no chat somente CREDENCIAL CONFIGURADA.
+4. Nunca peça a credencial no chat. Não abra, imprima ou repita o valor
+   de .env.local.
+
+PASSO 2 — DEPOIS DE CREDENCIAL CONFIGURADA
+1. Escreva o SQL mínimo da fatia aprovada:
+   - a tabela de negócio, com os tipos do quadro;
+   - a tabela de referência com o seed, se o quadro tiver;
+   - FK entre elas, se o quadro tiver;
+   - RLS HABILITADO nas tabelas (o acesso será só pelo backend com a
+     service role — não crie policies de acesso público).
+2. Aplique o SQL usando a conexão configurada. Se não for possível aplicar
+   direto, entregue o SQL num bloco único e guie o aluno a colar no
+   SQL Editor do Supabase — depois verifique.
+3. PROVE que funcionou: rode um select nas tabelas e mostre o resultado
+   (o seed da referência deve aparecer).
+
+NÃO FAÇA
+- tabelas além das do quadro aprovado;
+- colunas “para o futuro”;
+- desligar RLS ou criar policy pública;
+- backend, front, IA ou deploy.
+
+Ao terminar, entregue: o SQL aplicado, a prova do select e a frase
+“Banco pronto. Próximo passo: backend e tela.”</pre></div>
+</section>
+
+<section id="a3">
+  <h2>A3 · Backend e tela <span class="file">POST + GET + front</span></h2>
+  <p class="when">Use depois do A2. Fecha a fatia: dado atravessando do formulário à tela.</p>
+  <div class="prompt"><button class="copy">Copiar</button><pre>Leia docs/fatia-aprovada.md. O banco já existe no Supabase (prompt anterior).
+Sua tarefa agora é implementar o backend e ligar a tela — exatamente o que o
+quadro aprovado descreve, nada além.
 
 ARQUITETURA OBRIGATÓRIA
-- preserve o front e a stack existentes sempre que possível;
-- se já for Next.js, use Route Handlers em /api;
-- o front chama apenas /api/... e não acessa o Supabase diretamente;
-- o backend usa variáveis server-side;
-- secret/service key nunca aparece no front ou em NEXT_PUBLIC_;
-- use no máximo uma tabela de negócio nova;
-- crie no máximo um POST e um GET.
+- preserve o front e a stack existentes;
+- se for Next.js, use Route Handlers em /api;
+- o front chama apenas /api/... e NUNCA acessa o Supabase diretamente;
+- o backend usa as variáveis de .env.local (server-side);
+- secret/service key nunca aparece no front nem em NEXT_PUBLIC_;
+- somente as rotas do quadro: um POST e um GET (com o filtro aprovado,
+  se houver).
 
-PRIMEIRA RESPOSTA — SEM IMPLEMENTAR
-Inspecione o projeto e responda somente com:
+ORDEM
+1. Mostre o plano de arquivos (criados e alterados) antes de começar.
+2. Implemente e teste o POST — valide os tipos; input inválido recebe
+   erro legível.
+3. Implemente e teste o GET (com o filtro, se aprovado).
+4. Ligue SOMENTE a tela do quadro, preservando o visual do mock. Se houver
+   tabela de referência, o select do formulário vem do banco.
+5. Implemente loading, erro e atualização após envio apenas nessa fatia.
+6. Rode os três critérios de aceite do quadro.
+7. Prove que o refresh preserva o registro.
 
-A. primeiro passo do processo encontrado;
-B. entidade escolhida e seus 3 a 5 campos;
-C. tabela usada ou criada;
-D. POST e o que grava;
-E. GET e o que devolve;
-F. única tela/componente conectado;
-G. arquivos que seriam criados ou alterados;
-H. três critérios de aceite;
-I. lista “não será implementado”.
+NÃO FAÇA
+- completar outras telas ou botões;
+- autenticação, papéis ou permissões;
+- IA, OCR, upload, storage ou integração externa;
+- editar, excluir, aprovar ou notificar;
+- refatorar o front ou criar arquitetura para o produto inteiro;
+- adicionar algo “útil” que não está no quadro.
 
-Depois pare e aguarde APROVAR.
-
-DEPOIS DE APROVAR — IMPLEMENTAÇÃO
-1. Verifique scripts e padrões já existentes.
-2. Mostre o plano imediato de arquivos.
-3. Crie ou ajuste apenas o SQL mínimo.
-4. Implemente e teste o POST.
-5. Implemente e teste o GET.
-6. Ligue somente a tela aprovada, preservando o visual.
-7. Implemente loading, erro e atualização após envio apenas nessa fatia.
-8. Rode os três critérios de aceite.
-9. Prove que o refresh preserva o registro.
-10. Se precisar sair do escopo, PARE e explique. Não amplie por conta própria.
+Se precisar sair do escopo do quadro, PARE e explique. Não amplie por conta
+própria.
 
 DEFINIÇÃO DE PRONTO
 - um input válido aparece no Supabase;
 - a tela mostra o registro por meio do GET;
 - após refresh, o registro continua aparecendo;
 - input inválido recebe erro legível;
-- nenhuma chave secreta está no cliente;
-- o resto do mock permanece fora do escopo.
+- nenhuma chave secreta está no cliente.
 
-Ao terminar, entregue:
-1. arquivos alterados;
-2. variáveis necessárias, sem valores;
-3. como rodar;
-4. evidências dos critérios de aceite;
-5. o que permaneceu fora do escopo.
-
-Não publique. O deploy será feito separadamente com o Prompt C.</pre></div>
-</section>
-
-<section id="avalia-a">
-  <h2>O que você avalia <em>antes de aprovar</em></h2>
-  <div class="check">
-    <label><input type="checkbox"> É realmente <b>uma</b> entidade?</label>
-    <label><input type="checkbox"> Tem no máximo <b>cinco campos</b>?</label>
-    <label><input type="checkbox"> É o <b>começo</b> do processo?</label>
-    <label><input type="checkbox"> Tem só uma tela, um POST e um GET?</label>
-    <label><input type="checkbox"> Dá para explicar o fluxo <b>em voz alta</b>?</label>
-    <label><input type="checkbox"> O Claude deixou o resto <b>explicitamente fora</b>?</label>
-  </div>
-  <p>Se não, peça mudanças com suas próprias palavras. Não há prompt de correção obrigatório.</p>
+Ao terminar, entregue: arquivos alterados, como rodar, evidências dos três
+critérios de aceite e o que ficou fora do escopo. Não publique — o deploy é
+outro prompt.</pre></div>
 </section>
 
 <section class="exhead" id="b">
-  <div class="k">Prompt B</div>
-  <h1>Uma sugestão da LLM <em>registrada no banco</em></h1>
-  <p>Use somente <b>depois</b> que a primeira fatia estiver funcionando. Cole uma vez.</p>
+  <div class="k">Bloco B</div>
+  <h1>Decisão com <em>IA</em></h1>
 </section>
 
-<section id="prompt-b">
-  <h2>O prompt <span class="file">decisoes_ia</span></h2>
-  <div class="prompt"><button class="copy">Copiar</button><pre>Você está trabalhando em um protótipo criado por alunos em uma aula. O projeto
-já tem uma fatia funcional: um input é gravado no Supabase e uma tela lê os
-dados por meio do backend.
+<section id="b1">
+  <h2>B1 · Escolher a decisão <span class="file">só proposta</span></h2>
+  <p class="when">Use com a fatia A funcionando. Nada é implementado aqui.</p>
+  <div class="prompt"><button class="copy">Copiar</button><pre>O projeto já tem uma fatia funcional: um input é gravado no Supabase e uma
+tela lê os dados pelo backend (veja docs/fatia-aprovada.md).
 
-CONTEXTO DIDÁTICO
-Tudo será feito com dados sintéticos, em sandbox descartável. O objetivo é
-aprender o fluxo banco → backend → LLM → decisão registrada → revisão humana.
-Não estamos construindo ou autorizando um sistema de produção. A LLM apenas
-sugere; ela não altera o registro original nem executa ações externas.
+Tudo continua sintético e em sandbox. O fluxo que vamos aprender:
+banco → backend → LLM → decisão registrada → revisão humana. A LLM apenas
+SUGERE: ela não altera o registro original nem executa ações externas.
 
-PROVEDOR DA AULA
-Use exclusivamente um modelo GPT por meio da OpenAI API, com o SDK oficial
-JavaScript `openai` e a Responses API. Não automatize a interface do ChatGPT e
-não use outro provedor. O modelo deve vir da variável server-side
-`OPENAI_MODEL`; a chave deve vir de `OPENAI_API_KEY`.
-
-OBJETIVO
-Encontrar e depois implementar UMA decisão pequena em que uma LLM possa ajudar
-a partir de UM registro já salvo no banco.
-
-Fluxo obrigatório:
-
-registro existente → backend busca pelo ID → envia poucos campos à LLM
-→ valida JSON → grava em decisoes_ia → mostra a sugestão no front
+SUA TAREFA AGORA
+Apenas ESCOLHER uma decisão pequena em que uma LLM possa ajudar a partir de
+UM registro já salvo no banco.
 
 UMA BOA DECISÃO PARA A AULA
 - usa um único registro existente;
 - devolve categoria, prioridade, status sugerido ou próximo passo curto;
 - possui de 2 a 5 respostas permitidas;
 - pode ser conferida por uma pessoa em menos de 30 segundos;
-- o erro é reversível e fica restrito a `decisoes_ia`;
+- o erro é reversível e fica restrito à tabela decisoes_ia;
 - permite criar 3 exemplos sintéticos com resposta esperada;
 - depende de interpretação de texto; se if/else resolver, não force LLM.
 
@@ -336,96 +290,118 @@ NÃO ESCOLHA
 - decisão jurídica, médica, financeira, trabalhista ou de segurança;
 - calcular totais, impostos ou reconciliações;
 - gerar texto livre longo;
-- alterar o registro original;
-- enviar mensagens ou disparar ações;
-- usar dados pessoais, confidenciais ou reais;
-- criar agente, RAG, vetor ou multiagente;
+- alterar o registro original ou disparar ações;
+- dados pessoais, confidenciais ou reais;
+- agente, RAG, vetor ou multiagente;
 - tarefa sem resposta verificável.
 
 MODO DE TRABALHO — REGRA ABSOLUTA
-Você começa em MODO PROPOSTA.
-
-Enquanto a mensagem do aluno não for exatamente APROVAR:
+Você está em MODO PROPOSTA. Enquanto a mensagem do aluno não for exatamente
+APROVAR:
 - não crie ou altere arquivos, banco ou dependências;
-- não chame uma LLM;
-- apresente ou ajuste a proposta conforme o feedback do aluno;
-- termine cada resposta com:
-  “Aguardando APROVAR. Não fiz alterações.”
+- não chame nenhuma LLM;
+- ajuste a proposta conforme o feedback;
+- termine cada resposta com: “Aguardando APROVAR. Não fiz alterações.”
 
-Somente quando o aluno responder exatamente APROVAR, implemente a versão mais
-recente da proposta. APROVAR não autoriza ampliar o escopo.
+PRIMEIRA RESPOSTA — O QUADRO DA DECISÃO
+Avalie até 3 decisões candidatas numa tabela curta (nome · registro de
+origem · campos usados · saídas permitidas · como o humano verifica · risco
+se errar · por que LLM e não regra · nota 1-5 de adequação à aula).
 
-PRIMEIRA RESPOSTA — SEM IMPLEMENTAR
-Avalie até 3 decisões candidatas em uma tabela com:
+Recomende UMA. Se regra determinística for melhor, diga isso.
 
-1. nome da decisão;
-2. tabela/registro de origem;
-3. campos usados;
-4. opções de saída permitidas;
-5. como o humano verifica;
-6. risco se errar;
-7. por que LLM e não regra simples;
-8. adequação à aula, de 1 a 5.
+Para a recomendada, preencha:
 
-Recomende UMA candidata. Se regra determinística for melhor, diga isso.
-
-Para a recomendada, mostre:
-- pergunta exata respondida pela IA;
-- `tipo_decisao`;
-- campos enviados à LLM;
-- JSON exato de resposta;
-- 3 exemplos sintéticos e saída esperada;
-- única tela onde a sugestão aparecerá;
-- lista “não será implementado”.
+═══════════════ DECISÃO ESCOLHIDA ═══════════════
+1. PERGUNTA EXATA que a IA responde
+2. tipo_decisao (identificador curto)
+3. CAMPOS enviados à LLM (somente os necessários)
+4. JSON EXATO de resposta (com as opções permitidas)
+5. 3 EXEMPLOS sintéticos e a saída esperada de cada um
+6. TELA única onde a sugestão vai aparecer
+7. NÃO SERÁ IMPLEMENTADO: lista explícita
+═════════════════════════════════════════════════
 
 Depois pare e aguarde APROVAR.
 
-DEPOIS DE APROVAR — ESCOPO TÉCNICO
-Crie somente uma tabela nova, `decisoes_ia`, com:
+QUANDO RECEBER APROVAR
+Crie somente UM arquivo: docs/decisao-aprovada.md, com o quadro final.
+Nada além disso. Confirme com:
+“Decisão registrada em docs/decisao-aprovada.md. Próximo passo: a tabela.”</pre></div>
+</section>
+
+<section id="b2">
+  <h2>B2 · Tabela decisoes_ia <span class="file">docs/decisao-aprovada.md</span></h2>
+  <p class="when">Use depois do B1 aprovado. A credencial do Supabase já está no <code>.env.local</code>.</p>
+  <div class="prompt"><button class="copy">Copiar</button><pre>Leia docs/decisao-aprovada.md. Sua tarefa agora é criar SOMENTE a tabela
+que registra as sugestões da IA. Nada de backend, LLM ou tela ainda.
+
+A TABELA
+Crie decisoes_ia no Supabase (conexão já configurada em .env.local):
 - id;
-- registro_origem_id;
+- registro_origem_id — FK REAL para a tabela de negócio da fatia;
 - tipo_decisao;
 - entrada_snapshot em JSON;
 - resultado em JSON;
 - modelo;
 - prompt_versao;
-- status (`sugerida`, `aceita`, `rejeitada`), iniciando em `sugerida`;
+- status (sugerida / aceita / rejeitada), iniciando em sugerida;
 - criado_em.
 
-Crie somente uma rota nova, POST `/api/decisoes`, que:
+RLS habilitado, sem policy pública — o acesso é só pelo backend.
+
+Aplique o SQL pela conexão; se não for possível, entregue o bloco único e
+guie o aluno no SQL Editor. Depois PROVE com um select que a tabela existe
+e que a FK aponta para a tabela certa.
+
+NÃO FAÇA
+- outras tabelas ou colunas além destas;
+- backend, chamada de LLM, tela ou deploy;
+- alterar as tabelas da fatia A.
+
+Ao terminar: SQL aplicado, prova do select e a frase
+“Tabela pronta. Próximo passo: backend e LLM.”</pre></div>
+</section>
+
+<section id="b3">
+  <h2>B3 · Backend e LLM <span class="file">simulação → chave → real</span></h2>
+  <p class="when">Use depois do B2. O Claude para e espera <code>CHAVE CONFIGURADA</code> antes da OpenAI real.</p>
+  <div class="prompt"><button class="copy">Copiar</button><pre>Leia docs/decisao-aprovada.md. O banco já tem a tabela decisoes_ia. Sua
+tarefa agora é implementar a rota, a chamada à LLM e a exibição na tela.
+
+PROVEDOR DA AULA
+Use exclusivamente um modelo GPT pela OpenAI API, com o SDK oficial
+JavaScript `openai` e a Responses API. Não automatize a interface do ChatGPT
+e não use outro provedor. Modelo em OPENAI_MODEL, chave em OPENAI_API_KEY —
+sempre server-side.
+
+A ROTA
+Crie somente POST /api/decisoes, que:
 - recebe apenas o ID do registro de origem;
-- busca o registro no Supabase no backend;
-- seleciona apenas os campos aprovados;
-- chama a LLM no backend;
-- exige o JSON aprovado;
+- busca o registro no Supabase, no backend;
+- seleciona apenas os campos do quadro aprovado;
+- chama a LLM no backend, exigindo saída estruturada no JSON aprovado;
 - rejeita saída fora das opções permitidas;
-- grava entrada, resultado e metadados em `decisoes_ia`;
+- grava entrada, resultado e metadados em decisoes_ia;
 - devolve a decisão criada ou erro legível.
 
-Mostre a sugestão somente na tela aprovada. Mantenha chaves do Supabase e da
-OpenAI apenas em variáveis server-side, nunca em NEXT_PUBLIC_. Use o SDK
-oficial da OpenAI e a Responses API. Exija uma saída estruturada que corresponda
-ao JSON aprovado antes de gravar.
+O registro original NUNCA é alterado. A sugestão aparece somente na tela do
+quadro aprovado, com a justificativa.
 
-PAUSA OBRIGATÓRIA PARA A CHAVE DA OPENAI
-Depois que a resposta simulada estiver funcionando e antes da primeira chamada
-real à OpenAI:
-
-1. Crie ou atualize somente `.env.example`, contendo os nomes
-   `OPENAI_API_KEY` e `OPENAI_MODEL`, sem valores reais.
-2. Confirme que `.env.local` está no `.gitignore`. Se o projeto ignora
-   `.env*`, mantenha a exceção `!.env.example`, pois esse arquivo contém apenas
-   nomes e pode ser compartilhado.
-3. PARE e instrua o aluno a:
-   - criar uma API key diretamente no painel da OpenAI;
-   - abrir ou criar `.env.local` manualmente no editor;
-   - colar a chave diretamente nesse arquivo como `OPENAI_API_KEY=...`;
-   - preencher `OPENAI_MODEL` com o modelo GPT disponível para a aula;
-   - salvar o arquivo e reiniciar o servidor local, se necessário;
-   - responder no chat somente `CHAVE CONFIGURADA`.
-4. Nunca peça que o aluno cole a chave no chat. Não abra, leia, imprima,
-   registre ou repita o valor de `.env.local`.
-5. Só depois de receber `CHAVE CONFIGURADA`, faça a chamada real e os testes.
+ORDEM DE IMPLEMENTAÇÃO
+1. Mostre o plano de arquivos.
+2. Implemente o POST com resposta SIMULADA fixa e prove a gravação em
+   decisoes_ia.
+3. PAUSA DA CHAVE — antes da primeira chamada real:
+   - adicione OPENAI_API_KEY e OPENAI_MODEL ao .env.example, sem valores;
+   - PARE e instrua o aluno a criar a key no painel da OpenAI, colar em
+     .env.local no editor, preencher OPENAI_MODEL, salvar e responder no
+     chat somente CHAVE CONFIGURADA;
+   - nunca peça a chave no chat; não leia nem repita o valor de .env.local.
+4. Depois de CHAVE CONFIGURADA, troque a simulação pela Responses API.
+5. Valide o JSON antes de gravar.
+6. Mostre a sugestão na tela aprovada.
+7. Rode os 3 exemplos do quadro e compare esperado vs. obtido, numa tabela.
 
 NÃO IMPLEMENTE
 - mudança automática no registro original;
@@ -433,67 +409,35 @@ NÃO IMPLEMENTE
 - lote, fila, cron, webhook ou integração;
 - texto fora do JSON aprovado;
 - “confiança” inventada pela LLM como probabilidade calibrada;
-- uma segunda decisão;
-- requisitos de produção.
+- uma segunda decisão.
 
-ORDEM DE IMPLEMENTAÇÃO
-1. Mostre os arquivos que serão alterados.
-2. Crie `decisoes_ia`.
-3. Implemente o POST com resposta simulada fixa e prove a gravação.
-4. Faça a pausa obrigatória de credencial descrita acima.
-5. Após `CHAVE CONFIGURADA`, substitua a simulação pela OpenAI Responses API.
-6. Valide o JSON antes de gravar.
-7. Mostre a sugestão na tela aprovada.
-8. Rode os 3 exemplos e compare esperado vs. obtido.
+Se precisar de outra tabela, outra rota ou uma ação real, PARE e explique.
 
 DEFINIÇÃO DE PRONTO
 - backend recebe apenas um ID;
-- registro é lido do banco no servidor;
 - só os campos aprovados chegam à LLM;
 - saída é JSON válido dentro da taxonomia;
-- sugestão fica registrada em `decisoes_ia`;
+- sugestão registrada em decisoes_ia; original intacto;
 - tela mostra sugestão e justificativa;
-- registro original permanece inalterado;
-- três testes estão documentados;
-- nenhuma chave aparece no cliente ou repositório.
+- os 3 testes documentados (esperado vs. obtido);
+- nenhuma chave no cliente ou no repositório.
 
-Se precisar de outra tabela, outra rota ou uma ação real, PARE e explique. Não
-amplie por conta própria.
-
-Ao terminar, entregue:
-1. arquivos alterados;
-2. SQL criado;
-3. variáveis necessárias, sem valores;
-4. resultado dos 3 testes;
-5. limites conhecidos e itens fora do escopo.</pre></div>
-</section>
-
-<section id="avalia-b">
-  <h2>O que você avalia <em>antes de aprovar a decisão</em></h2>
-  <ul class="qs">
-    <li>Qual <b>pergunta exata</b> a IA responde?</li>
-    <li>Quais <b>respostas</b> são permitidas?</li>
-    <li>Por que <code>if/else</code> não basta?</li>
-    <li>Como uma pessoa <b>verifica</b> a sugestão?</li>
-    <li>O que acontece <b>quando a IA erra</b>?</li>
-  </ul>
-  <p style="margin-top:16px">Converse normalmente até ficar satisfeito e então escreva
-  apenas <code>APROVAR</code>.</p>
+Ao terminar: arquivos alterados, resultado dos 3 testes, limites conhecidos
+e o que ficou fora do escopo.</pre></div>
 </section>
 
 <section class="exhead" id="c">
-  <div class="k">Prompt C</div>
-  <h1>Publicar o sandbox na <em>Vercel</em></h1>
-  <p>Use somente depois que o fluxo estiver <b>funcionando localmente</b>.</p>
+  <div class="k">Bloco C</div>
+  <h1>Publicar na <em>Vercel</em></h1>
 </section>
 
-<section id="prompt-c">
-  <h2>O prompt <span class="file">preview deployment</span></h2>
+<section id="c1">
+  <h2>C · Deploy <span class="file">preview deployment</span></h2>
+  <p class="when">Use com tudo funcionando localmente. O Claude para e espera <code>VARIAVEIS CONFIGURADAS</code>.</p>
   <div class="prompt"><button class="copy">Copiar</button><pre>Você está trabalhando em um protótipo funcional criado por alunos durante uma
 aula. O fluxo já funciona localmente e agora queremos publicá-lo na Vercel para
 enxergar como front e backend passam a responder por uma URL na internet.
 
-CONTEXTO DIDÁTICO
 Este é um sandbox temporário com dados sintéticos. A publicação serve para
 aprendizado e demonstração; não é produção e não autoriza uso com dados reais.
 
@@ -594,34 +538,6 @@ Ao terminar, entregue somente:
 4. variáveis configuradas, apenas os nomes;
 5. qualquer limite conhecido;
 6. como remover o deploy depois da aula.</pre></div>
-</section>
-
-<section id="debrief">
-  <h2>Debrief</h2>
-  <ul class="qs">
-    <li>A LLM <b>decidiu</b> ou <b>sugeriu</b>?</li>
-    <li>Qual dado saiu do banco e chegou ao modelo?</li>
-    <li>Onde a resposta ficou registrada?</li>
-    <li>O que impede uma saída fora da taxonomia?</li>
-    <li>Em quais exemplos ela errou?</li>
-    <li>Ainda parece melhor que uma regra simples?</li>
-  </ul>
-</section>
-
-<section id="facilitadora">
-  <h2>Para a <em>facilitadora</em></h2>
-  <div class="facil">
-    <span class="tag">Parar a dupla se o Claude</span>
-    <ul>
-      <li>alterar código antes de <code>APROVAR</code>;</li>
-      <li>criar mais de uma tabela de negócio;</li>
-      <li>propor upload, IA ou auth “já que estamos aqui” na primeira fatia;</li>
-      <li>substituir todo o mock;</li>
-      <li>conectar o navegador diretamente com secret/service key;</li>
-      <li>implementar ação automática a partir da sugestão da LLM;</li>
-      <li>declarar sucesso sem mostrar persistência após refresh.</li>
-    </ul>
-  </div>
 </section>
 
 <footer>Programa de Multiplicadores de IA · <b style="color:var(--accent)">✳</b> Muriel Auler</footer>
